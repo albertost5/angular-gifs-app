@@ -6,8 +6,8 @@
     <hr class="text-white"/>
 
     <div class="list-group list-reset">
-      <a href="#" class="list-group-item list-group-item-action">
-        Dashboard
+      <a *ngFor="let gif of history" href="#" class="list-group-item list-group-item-action">
+        {{ gif | titlecase }}
       </a>
     </div>
 </div>
