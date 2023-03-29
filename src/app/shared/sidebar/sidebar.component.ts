@@ -9,7 +9,12 @@ export class SidebarComponent {
 
   constructor( private readonly gifsService: GifsService ) {}
 
+  // Eg: ['Marvel', 'Wolverine', 'Hulk'];
   get history(): string[] {
     return this.gifsService.history;
+  }
+
+  search(searchTerm: string) {
+    return this.gifsService.addGif(searchTerm);
   }
 }
