@@ -18,7 +18,6 @@ export class SearchBoxComponent {
   tagInput!: ElementRef<HTMLInputElement>
 
   searchTag() {
-    console.log('searchTag fired!', this.tagInput.nativeElement.value);
     this.gifsService.searchTag(this.tagInput.nativeElement.value);
     this.tagInput.nativeElement.value = '';
   }
