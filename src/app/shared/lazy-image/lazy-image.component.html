@@ -1,0 +1,16 @@
+<div class='d-flex justify-content-center'>
+  <img
+    class='card-img-top animate__animated animate__fadeIn'
+    [src]='url'
+    [alt]='description'
+    (load)='onLoad()'
+    [ngStyle]='{display: isLoaded ? "" : "none"}'
+  />
+  <img
+    *ngIf='!isLoaded'
+    src='assets/spinner.svg'
+    class='mt-3'
+    height='35'
+    width='35'
+  />
+</div>

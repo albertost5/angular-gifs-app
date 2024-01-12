@@ -30,8 +30,8 @@ export class GifsService {
       }
     });
     // new HttpParams().set('key', 'value')...
-
-    this.http.get<SearchResponse>(`${this.basePath}/search`, {params}).subscribe(({data}) => this.giftList = data);
+    this.http.get<SearchResponse>(`${this.basePath}/search`, {params})
+        .subscribe(({data}) => this.giftList = data);
   }
 
   private validateAndAddTag(tag: string): void {
@@ -58,6 +58,5 @@ export class GifsService {
 
   constructor(private http: HttpClient) {
     this.loadLocalStorage();
-
   }
 }
